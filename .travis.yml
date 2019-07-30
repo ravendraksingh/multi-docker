@@ -19,9 +19,9 @@ after_success:
 
   # Take all images and push to docker hub
   - docker push ravendraksingh/multi-client
-  - docker push ravendraksingh/multi-nginx
-  - docker push ravendraksingh/multi-server
-  - docker push ravendraksingh/multi-worker
+  # - docker push ravendraksingh/multi-nginx
+  # - docker push ravendraksingh/multi-server
+  # - docker push ravendraksingh/multi-worker
 
   # deploy:
   #   provier: elasticbeanstalk
