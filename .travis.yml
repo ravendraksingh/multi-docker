@@ -22,3 +22,17 @@ after_success:
   - docker push ravendraksingh/multi-nginx
   - docker push ravendraksingh/multi-server
   - docker push ravendraksingh/multi-worker
+
+  deploy:
+    provier: elasticbeanstalk
+    region: ap-south-1
+    app: multi-docker
+    env: Multidocker-env
+    bucket_name: S3_BUCKET_NAME
+    bucket_path: docker_multi
+    on:
+      branch: master
+    access_key_id:
+      secure: $AWS_ACCESS_KEY  
+    secret_access_key:
+      secure: $AWS_SECRET_KEY  
